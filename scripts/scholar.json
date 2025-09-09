@@ -1,0 +1,175 @@
+{
+  "scholarsSessions": [
+    {
+      "id": 1,
+      "name": "Dr. Ahmed Al-Farooq",
+      "specialty": "Islamic Jurisprudence",
+      "rating": 4.9,
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "bio": "Dr. Al-Farooq has over 20 years of experience in Islamic studies and has authored numerous books on Islamic jurisprudence. He received his PhD from Al-Azhar University and has been a visiting scholar at several prestigious institutions worldwide.",
+      "availability": "Monday, Wednesday, Friday",
+      "sessions": 120,
+      "students": 1500,
+      "languages": ["Arabic", "English", "Urdu"],
+      "certifications": [
+        "Al-Azhar University PhD",
+        "Islamic Finance Certification"
+      ],
+      "scholar": "6819c5a12a73d59e5e5adb0b"
+    },
+    {
+      "id": 2,
+      "name": "'Dr. Aisha Rahman'",
+      "specialty": "Quranic Studies",
+      "rating": 4.8,
+      "image": "https://randomuser.me/api/portraits/women/32.jpg",
+      "bio": "Dr. Rahman specializes in Quranic interpretation and has been teaching for 15 years at prestigious Islamic institutions. Her approach combines traditional and contemporary methodologies to make Quranic teachings accessible to modern audiences.",
+      "availability": "Tuesday, Thursday, Saturday",
+      "sessions": 95,
+      "students": 1200,
+      "languages": ["Arabic", "English", "French"],
+      "certifications": [
+        "Islamic University of Madinah",
+        "Ijazah in Quranic Recitation"
+      ],
+      "scholar": "6819c5a12a73d59e5e5adb0c"
+    },
+    {
+      "id": 3,
+      "name": "Sheikh Mustafa Kamal",
+      "specialty": "Hadith Studies",
+      "rating": 4.7,
+      "image": "https://randomuser.me/api/portraits/men/36.jpg",
+      "bio": "Sheikh Kamal is renowned for his deep knowledge of Hadith and has dedicated his life to spreading authentic Islamic knowledge. He has memorized over 5,000 hadiths with their chains of narration and is respected for his meticulous verification methods.",
+      "availability": "Monday, Thursday, Sunday",
+      "sessions": 150,
+      "students": 2000,
+      "languages": ["Arabic", "English", "Turkish"],
+      "certifications": [
+        "Hadith Authentication Specialist",
+        "Islamic University of Madinah"
+      ],
+      "scholar": "6819c5a12a73d59e5e5adb0d"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Fatima Al-Zahra",
+      "specialty": "Islamic History",
+      "rating": 4.9,
+      "image": "https://randomuser.me/api/portraits/women/45.jpg",
+      "bio": "Dr. Fatima is a leading expert in Islamic history with a focus on the golden age of Islamic civilization. Her research on the contributions of Muslims to science, medicine, and philosophy has been published in numerous academic journals.",
+      "availability": "Wednesday, Friday, Sunday",
+      "sessions": 110,
+      "students": 1800,
+      "languages": ["Arabic", "English", "Persian"],
+      "certifications": [
+        "PhD in Islamic History",
+        "Research Fellowship at Oxford"
+      ],
+      "scholar": "6819c5a12a73d59e5e5adb0e"
+    },
+    {
+      "id": 5,
+      "name": "Imam Yusuf Abdullah",
+      "specialty": "Contemporary Fiqh",
+      "rating": 4.8,
+      "image": "https://randomuser.me/api/portraits/men/75.jpg",
+      "bio": "Imam Yusuf specializes in applying Islamic jurisprudence to contemporary issues. His balanced approach has helped many Muslims navigate modern challenges while staying true to their faith. He serves as an imam at one of the largest mosques in North America.",
+      "availability": "Monday, Tuesday, Saturday",
+      "sessions": 130,
+      "students": 2200,
+      "languages": ["Arabic", "English", "Spanish"],
+      "certifications": ["Masters in Islamic Law", "Certified Counselor"],
+      "scholar": "6819c5a12a73d59e5e5adb0f"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Zainab Malik",
+      "specialty": "Islamic Psychology",
+      "rating": 4.9,
+      "image": "https://randomuser.me/api/portraits/women/65.jpg",
+      "bio": "Dr. Malik bridges the gap between modern psychology and Islamic teachings on mental well-being. Her innovative approach has helped thousands of Muslims address mental health concerns through faith-based practices combined with evidence-based psychological techniques.",
+      "availability": "Tuesday, Thursday, Sunday",
+      "sessions": 85,
+      "students": 1600,
+      "languages": ["Arabic", "English", "Malay"],
+      "certifications": [
+        "PhD in Clinical Psychology",
+        "Islamic Counseling Certification"
+      ],
+      "scholar": "6819c5a12a73d59e5e5adb10"
+    },
+    {
+      "id": 7,
+      "name": "Sheikh Omar Farooq",
+      "specialty": "Tajweed & Quranic Recitation",
+      "rating": 5.0,
+      "image": "https://randomuser.me/api/portraits/men/22.jpg",
+      "bio": "Sheikh Omar is internationally recognized for his beautiful Quranic recitation and expertise in Tajweed rules. He has memorized the entire Quran and holds multiple ijazahs (certifications) in different recitation styles. His soothing voice has touched millions of hearts worldwide.",
+      "availability": "Monday, Wednesday, Friday",
+      "sessions": 200,
+      "students": 3000,
+      "languages": ["Arabic", "English", "Indonesian"],
+      "certifications": [
+        "Ijazah in 10 Qira'at",
+        "Al-Azhar Certification in Tajweed"
+      ],
+      "scholar": "6819c5a12a73d59e5e5adb11"
+    },
+    {
+      "name": "Dr. Yasir Qadhi",
+      "specialty": "Islamic Theology",
+      "rating": 4.9,
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "bio": "Dr. Yasir Qadhi is a renowned Islamic scholar and academic.",
+      "availability": "Monday, Wednesday, Friday",
+      "students": 1000,
+      "languages": ["English", "Arabic"],
+      "certifications": ["PhD in Islamic Studies"]
+    },
+    {
+      "name": "Shaykh Omar Suleiman",
+      "specialty": "Islamic Studies",
+      "rating": 4.8,
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "bio": "Shaykh Omar Suleiman is a respected teacher and speaker.",
+      "availability": "Tuesday, Thursday",
+      "students": 800,
+      "languages": ["English", "Arabic"],
+      "certifications": ["MA in Islamic Studies"]
+    },
+    {
+      "name": "Mufti Menk",
+      "specialty": "Islamic Motivation",
+      "rating": 5.0,
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "bio": "Mufti Menk is a globally recognized Islamic scholar.",
+      "availability": "Friday, Sunday",
+      "students": 2000,
+      "languages": ["English", "Arabic"],
+      "certifications": ["Mufti Degree"]
+    },
+    {
+      "name": "Shaykh Ahmed",
+      "specialty": "Fiqh",
+      "rating": 4.7,
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
+      "bio": "Shaykh Ahmed is an expert in Islamic jurisprudence.",
+      "availability": "Monday, Thursday",
+      "students": 600,
+      "languages": ["English", "Arabic"],
+      "certifications": ["PhD in Fiqh"]
+    },
+    {
+      "name": "Ustadha Fatima",
+      "specialty": "Quranic Studies",
+      "rating": 4.9,
+      "image": "https://randomuser.me/api/portraits/women/5.jpg",
+      "bio": "Ustadha Fatima is a teacher of Quranic sciences.",
+      "availability": "Wednesday, Saturday",
+      "students": 700,
+      "languages": ["English", "Arabic"],
+      "certifications": ["Ijazah in Quran"]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "featuredSessions": [
+    {
+      "id": 1,
+      "title": "Understanding Islamic Finance in Modern Economy",
+      "scholar": "Dr. Yasir Qadhi",
+      "description": "An in-depth exploration of Islamic finance principles and their application in today's economic landscape.",
+      "date": "2025-05-03",
+      "startTime": "17:00",
+      "endTime": "19:30",
+      "image": "https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?src=https://media.islamicity.org/wp-content/uploads/2019/01/Yasir-Qadhi.jpg&w=600&h=337&q=100",
+      "scholarImage": "https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?src=https://media.islamicity.org/wp-content/uploads/2019/01/Yasir-Qadhi.jpg&w=600&h=337&q=100",
+      "zoomLink": "https://zoom.us/j/123456789",
+      "location": "Online via Zoom"
+    },
+    {
+      "id": 2,
+      "title": "The Prophetic Approach to Family Relationships",
+      "scholar": "Shaykh Omar Suleiman",
+      "description": "Learn how to apply the Prophet's teachings to strengthen family bonds and resolve conflicts.",
+      "date": "2025-05-03",
+      "startTime": "17:49",
+      "endTime": "20:30",
+      "image": "https://yaqeeninstitute.org/wp-content/uploads/2021/11/Omar-Suleiman-web-1.jpg",
+      "scholarImage": "https://yaqeeninstitute.org/wp-content/uploads/2021/11/Omar-Suleiman-web-1.jpg",
+      "zoomLink": "https://zoom.us/j/987654321",
+      "location": "Online via Zoom"
+    },
+    {
+      "id": 3,
+      "title": "Spiritual Development in the Digital Age",
+      "scholar": "Mufti Menk",
+      "description": "Strategies for maintaining spiritual connection and growth while navigating modern technology.",
+      "date": "2025-05-03",
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "image": "https://i0.wp.com/www.muftimenk.com/wp-content/uploads/2020/02/Mufti-Menk-1.jpg?fit=1200%2C800&ssl=1",
+      "scholarImage": "https://i0.wp.com/www.muftimenk.com/wp-content/uploads/2020/02/Mufti-Menk-1.jpg?fit=1200%2C800&ssl=1",
+      "zoomLink": "https://zoom.us/j/123123123",
+      "location": "Online via Zoom"
+    },
+    {
+      "id": 4,
+      "title": "Fiqh Fundamentals",
+      "scholar": "Shaykh Ahmed",
+      "description": "Basic principles of Islamic jurisprudence.",
+      "date": "2025-06-15",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "image": "",
+      "scholarImage": "",
+      "zoomLink": "",
+      "location": ""
+    },
+    {
+      "id": 5,
+      "title": "Tafsir Session",
+      "scholar": "Ustadha Fatima",
+      "description": "Interpretation of Surah Al-Baqarah.",
+      "date": "2025-07-20",
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "image": "",
+      "scholarImage": "",
+      "zoomLink": "",
+      "location": ""
+    }
+  ]
+}
