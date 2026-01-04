@@ -5,7 +5,8 @@ const GroupSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String },
   image: { type: String },
-  owner: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  owner: { type: Schema.Types.ObjectId, ref: 'User', required: true }, // Original creator - cannot be removed
+  owners: [{ type: Schema.Types.ObjectId, ref: 'User' }], // Additional owners who can manage the group
   members: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   hiddenMembers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   tasks: [{ type: Schema.Types.ObjectId, ref: 'Task' }],

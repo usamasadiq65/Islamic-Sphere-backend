@@ -129,17 +129,20 @@ const getContacts = async (req, res) => {
       return res.status(200).json([]);
     }
 
-    let contacts = contactDoc.contacts.map(contact => {
-      return {
-        _id: contact.contactUser._id,
-        username: contact.contactUser.username,
-        name: contact.contactUser.firstName + ' ' + contact.contactUser.lastName,
-        email: contact.contactUser.email,
-        phone: contact.contactUser.phone,
-        approved: contact.approved,
-        dateAdded: contact.dateAdded
-      }
-    });
+    // Filter out contacts where the user has been deleted (null contactUser)
+    let contacts = contactDoc.contacts
+      .filter(contact => contact.contactUser !== null)
+      .map(contact => {
+        return {
+          _id: contact.contactUser._id,
+          username: contact.contactUser.username,
+          name: contact.contactUser.firstName + ' ' + contact.contactUser.lastName,
+          email: contact.contactUser.email,
+          phone: contact.contactUser.phone,
+          approved: contact.approved,
+          dateAdded: contact.dateAdded
+        }
+      });
 
     res.status(200).json(contacts);
   } catch (error) {
@@ -265,14 +268,17 @@ const approveUserRequest = async (req, res) => {
 const getContactRequests = async (req, res) => {
   try {
     let user = await User.findById(req.user._id).populate('requests');
-    let requests = user.requests.map(request => {
-      return {
-        _id: request._id,
-        username: request.username,
-        name: request.firstName + ' ' + request.lastName,
-        email: request.email,
-      }
-    });
+    // Filter out null requests (deleted users)
+    let requests = user.requests
+      .filter(request => request !== null)
+      .map(request => {
+        return {
+          _id: request._id,
+          username: request.username,
+          name: request.firstName + ' ' + request.lastName,
+          email: request.email,
+        }
+      });
     return res.status(200).json(requests);
   } catch (error) {
     console.error('Error fetching contacts:', error);
@@ -330,6 +336,11 @@ const getAllUsersWithContacts = async (req, res) => {
       const contactDoc = await Contact.findOne({ user: user._id })
         .populate('contacts.contactUser', 'username email firstName lastName');
       
+      // Filter out null contacts (deleted users)
+      const validContacts = contactDoc 
+        ? contactDoc.contacts.filter(c => c.contactUser !== null)
+        : [];
+      
       return {
         _id: user._id,
         username: user.username,
@@ -337,8 +348,8 @@ const getAllUsersWithContacts = async (req, res) => {
         firstName: user.firstName,
         lastName: user.lastName,
         role: user.role,
-        contacts: contactDoc ? contactDoc.contacts : [],
-        totalContacts: contactDoc ? contactDoc.contacts.length : 0
+        contacts: validContacts,
+        totalContacts: validContacts.length
       };
     }));
 

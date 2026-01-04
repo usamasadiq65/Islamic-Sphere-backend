@@ -6,7 +6,8 @@ const nodemailer = require('nodemailer');
 const getAllSessions = async (req, res) => {
   try {
     const sessions = await Session.find()
-      .populate('scholarSession', 'name image specialty'); // Populate scholar details
+      .populate('scholarSession', 'name image specialty')
+      .populate('scholarUserId', 'firstName lastName username image'); // Populate user-based scholar details
     res.json({ 
       success: true, 
       data: sessions, 
@@ -21,7 +22,8 @@ const getAllSessions = async (req, res) => {
 const getSessionById = async (req, res) => {
   try {
     const session = await Session.findById(req.params.id)
-      .populate('scholarSession', 'name image specialty bio availability');
+      .populate('scholarSession', 'name image specialty bio availability')
+      .populate('scholarUserId', 'firstName lastName username image bio');
     if (!session) return res.status(404).json({ 
       success: false, 
       message: 'Session not found' 
@@ -35,11 +37,11 @@ const getSessionById = async (req, res) => {
 // Create a new session
 const createSession = async (req, res) => {
   try {
-    // Validate scholar existence
-    if (!req.body.scholarSession) {
+    // Allow either scholarSession (ScholarSession ID) or scholarUserId + scholarName (User-based scholar)
+    if (!req.body.scholarSession && !req.body.scholarUserId && !req.body.scholarName) {
       return res.status(400).json({
         success: false,
-        message: 'Scholar ID is required'
+        message: 'Scholar information is required'
       });
     }
 
@@ -48,7 +50,8 @@ const createSession = async (req, res) => {
 
     // Fetch the saved session with populated scholar details
     const populatedSession = await Session.findById(session._id)
-      .populate('scholarSession', 'name image specialty');
+      .populate('scholarSession', 'name image specialty')
+      .populate('scholarUserId', 'firstName lastName username image');
 
     // Send email notifications to all registered users
     try {
@@ -75,8 +78,15 @@ const createSession = async (req, res) => {
           day: 'numeric'
         });
 
-        // Get scholar name for email
-        const scholarName = populatedSession.scholarSession?.name || 'Scholar';
+        // Get scholar name for email (support both ScholarSession and User-based)
+        let scholarName = 'Scholar';
+        if (populatedSession.scholarSession?.name) {
+          scholarName = populatedSession.scholarSession.name;
+        } else if (populatedSession.scholarName) {
+          scholarName = populatedSession.scholarName;
+        } else if (populatedSession.scholarUserId) {
+          scholarName = `${populatedSession.scholarUserId.firstName || ''} ${populatedSession.scholarUserId.lastName || ''}`.trim() || populatedSession.scholarUserId.username;
+        }
 
         // Create email template
         const emailPromises = users.map(user => {

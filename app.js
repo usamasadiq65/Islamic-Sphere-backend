@@ -24,6 +24,8 @@ const supportRoutes = require('./routes/support.routes');
 const prayerRoutes = require('./routes/prayer');
 const prayerSectionRoutes = require('./routes/prayerSection');
 const zakatRoutes = require('./routes/zakat');
+const webhookRoutes = require('./routes/webhook.routes');
+const { startCronJobs } = require('./services/cron.service');
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -39,6 +41,8 @@ let mongoConnected = false;
       .then(() => {
         console.log("Connected to MongoDB");
         mongoConnected = true;
+        // Start cron jobs after MongoDB connection
+        startCronJobs();
       })
       .catch((err) => {
         console.log("MongoDB connection error:", err);
@@ -74,6 +78,7 @@ app.use(passport.session());
 
 app.use(
   cors({
+    origin: ['http://localhost:3001', 'http://localhost:3000', 'http://localhost:3002', 'http://127.0.0.1:3001', 'http://127.0.0.1:3000', 'http://127.0.0.1:3002'],
     credentials: true,
   })
 )
@@ -91,6 +96,7 @@ app.use("/api/support", supportRoutes);
 app.use('/api/prayer', prayerRoutes);
 app.use('/api/prayer-section', prayerSectionRoutes);
 app.use('/api/zakat', zakatRoutes);
+app.use('/api/webhooks', webhookRoutes);
 
 
 // Basic route
